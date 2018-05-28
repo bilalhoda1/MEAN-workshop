@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="todo-list">
+  <div class="todo-list-item" *ngFor="let todoItem of list">
+    <div class="text">
+      {{todoItem.text}}<button class="btn" (click)="deleteTodo(todoItem.text)"><i class="fa fa-trash"></i></button>
+    </div>
+  </div>
+  <!-- <div class="todo-list-item">
+    <div class="text">
+      Browse the web
+    </div>
+  </div>
+  <div class="todo-list-item">
+    <div class="text">
+      Do laundry
+    </div>
+  </div>
+  <div class="todo-list-item">
+    <div class="text">
+      Go shopping
+    </div>
+  </div> -->
+</div>

@@ -1,0 +1,13 @@
+<h1 class="heading">
+  Welcome to {{title}}
+</h1>
+<div class="todo-app">
+  <h4 class="todo-title">Add an item</h4>
+  <div class="todo-body">
+  <p>Add an item in the list using the text box.What tasks do you have to do?</p>
+  <ta-todo-input (todoAdded)="addNewTodo($event)">
+  </ta-todo-input>
+  <ta-todo-list [list]="todoList">
+  </ta-todo-list>
+</div>
+</div>
