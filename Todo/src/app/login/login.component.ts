@@ -14,10 +14,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
-  check()
-  {     
-    if(this.username==localStorage.getItem('username') && this.password==localStorage.getItem('password'))
-    {
+  check() { console.log(localStorage.getItem('username'));
+    console.log(this.username === localStorage.getItem('username'));
+    if ( this.username === localStorage.getItem('username') && this.password === localStorage.getItem('password')) {
       this.router.navigate(['/home']);
     }
   }

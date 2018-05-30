@@ -14,14 +14,14 @@ export class RegisterComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    localStorage.clear();
   }
-  addDetails()
-  {
-    localStorage.setItem("lastname", this.lname);
-    localStorage.setItem("email", this.email);
-    localStorage.setItem("firstname", this.fname);
-    localStorage.setItem("username", this.name);
-    localStorage.setItem("password", this.pass);
+  addDetails() {
+    localStorage.setItem('lastname', this.lname);
+    localStorage.setItem('email', this.email);
+    localStorage.setItem('firstname', this.fname);
+    localStorage.setItem('username', this.name);
+    localStorage.setItem('password', this.pass);
     console.log(localStorage.getItem('username'));
   }
 }

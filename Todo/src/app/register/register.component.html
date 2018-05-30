@@ -2,7 +2,7 @@
 
 <div class="top">
   <div class="wrapper">
-    <form class="form-signin" #myForm="ngForm" (ngSubmit)="addDetails()">       
+    <form class="form-signin" >       
       <h2 class="form-signin-heading">Register</h2>
       <input type="text" class="form-control" name="firstname" placeholder="First Name" required="required" [(ngModel)]='fname' />
       <input type="text" class="form-control" name="lastname" placeholder="Last Name" required="required"  [(ngModel)]='lname'/>
@@ -10,7 +10,7 @@
       <input type="text" class="form-control" name="email" placeholder="Email Address" required="required"[(ngModel)]='email' />
       <input type="password" class="form-control" name="password" placeholder="Password" required="required" [(ngModel)]='pass'/>
       <div class="login"><a routerLink="login" routerLinkActive="active">Back</a></div>      
-      <button class="btn btn-lg btn-primary btn-block" type="button" routerLink="login">Register</button>   
+      <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="addDetails()" routerLink="login">Register</button>   
     </form>
   </div>
   
