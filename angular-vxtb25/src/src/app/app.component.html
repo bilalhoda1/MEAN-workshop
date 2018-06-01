@@ -1,0 +1,42 @@
+<hello name="{{ name }}"></hello>
+
+
+<div class="wrapper">
+  <app-box></app-box>
+  <app-circle></app-circle>
+  <app-box></app-box>
+  <app-circle></app-circle>
+  <app-box></app-box>
+  <app-circle></app-circle>
+  <app-box></app-box>
+  <app-circle></app-circle>
+</div>
+
+<div class="actions">
+  <div>
+    <!--button (click)="changeBoxColor('green')">
+    Turn box to green
+    </button>
+    <button (click)="changeBoxColor('cyan')">
+      Turn box to cyan
+    </button>
+    <button (click)="changeBoxColor('yellow')">
+      Turn box to yellow
+    </button-->
+    Box color input
+    <input type="text" [(ngModel)]="box"(ngModelChange)="changeBoxColor()"/>
+  </div>
+  <div>
+    <!--button (click)="changeCircleColor('green')">
+      Turn circle to green
+    </button>
+    <button (click)="changeCircleColor('cyan')">
+      Turn circle to cyan
+    </button>
+    <button (click)="changeCircleColor('yellow')">
+      Turn circle to yellow
+    </button-->
+    Circle color input
+    <input type="text" [(ngModel)]="circle"(ngModelChange)="changeCircleColor()"/>
+  </div>
+</div>

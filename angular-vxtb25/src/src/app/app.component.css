@@ -1,0 +1,14 @@
+* {
+  font-family: Lato;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.wrapper app-box, .wrapper app-circle {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
