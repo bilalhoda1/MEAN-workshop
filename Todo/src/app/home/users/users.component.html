@@ -1,0 +1,10 @@
+<div class="team">
+    <h2>Our team members</h2> 
+  <div class="list">
+    <div class="list-item" *ngFor="let user of users" (click)="showUser(user)">
+      <img src={{user.picture.large}}>
+      <div class="item">{{user.name.first|titlecase}} {{user.name.last|titlecase}}</div>
+
+    </div>
+  </div>
+</div>

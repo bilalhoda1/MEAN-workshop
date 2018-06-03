@@ -1,6 +1,13 @@
 .welcome{
   color:#49abfc;
+  margin-top:5%;
 }
+h4
+{
+  width:80%;
+  text-align:justified;
+}
+/*
 .progress-pie-chart {
   width: 200px;
   height: 200px;
@@ -70,3 +77,4 @@
   margin: 50px auto 0;
 }
 
+*/

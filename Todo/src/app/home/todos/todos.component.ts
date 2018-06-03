@@ -7,37 +7,50 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosComponent implements OnInit {
   todos;
-  text;
+  text = ' ';
+  tasks;
   placeholderVal = 'Enter task';
+  val: string;
+  obj: string;
   constructor() { }
 
   ngOnInit() {
-    this.todos = [
+    this.tasks = [
       {
-        text: 'Pickup kids at school'
+        text: 'Do homework'
       },
       {
         text: 'Meeting with Boss'
          },
       {
-        text: 'Dinner with wife'
+        text: 'Dinner with family'
       }
     ];
+    this.obj = localStorage.getItem('tasks');
+    this.todos = JSON.parse(this.obj);
   }
   addTodo() {
-    if (this.text !== ' ' ) {
-    this.todos.push({
+    if (this.text !== ' ') {
+    this.tasks.push({
       text: this.text
     });
+    this.val = JSON.stringify(this.tasks);
+    localStorage.setItem('tasks', this.val);
+    this.obj = localStorage.getItem('tasks');
+    this.todos = JSON.parse(this.obj);
     this.clearSearch();
    }
   }
   deleteTodo(todoText) {
-   for ( let i = 0; i < this.todos.length; i++) {
-      if ( this.todos[i].text === todoText) {
-          this.todos.splice(i, 1);
+   for ( let i = 0; i < this.tasks.length; i++) {
+      if ( this.tasks[i].text === todoText) {
+          this.tasks.splice(i, 1);
         }
    }
+   this.val = JSON.stringify(this.tasks);
+    localStorage.setItem('tasks', this.val);
+    this.obj = localStorage.getItem('tasks');
+    this.todos = JSON.parse(this.obj);
   }
   clearSearch() {
     this.text = ' ';
