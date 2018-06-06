@@ -16,12 +16,15 @@ app.get('/user', (req, res) =>
 app.get('/user/:id', (req, res) =>
 {
     userFound = user.getUserById(req.params.id);
-    if(userFound === false)
+    if(userFound)
     {
-        res.status(404).send("User with the given id does not exist.");
+      res.json(userFound);
+
     }
     else
-    res.json(userFound);
+      {
+        res.status(404).send("User with the given id does not exist.");
+      }
 });
 
 //Add User or post request
@@ -35,25 +38,30 @@ app.post('/user', (req, res) =>
 app.delete('/user/:id', (req, res) =>
 {
     userDeleted = user.deleteUser(req.params.id);
-    if(userDeleted === false)
+    if(userDeleted)
     {
-        res.status(404).send("User with the given id does not exist.");
-        return;
+      res.json(userDeleted);
+
     }
     else
-    res.json(userDeleted);
+    res.status(404).send("User with the given id does not exist.");
+
 });
 
 //Update User or port request
 app.put('/user/:id', (req, res) =>
 {
     userUpdated = user.updateUser(req.params.id, req.body);
-    if( userUpdated === false)
+    if(userUpdated)
     {
-        res.status(404).send("Error!!!");
+      res.json(userUpdated);
+
     }
     else
-    res.json(userUpdated);
+    {
+      res.status(404).send("Error!!!");
+    }
+
 });
 
 

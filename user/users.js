@@ -27,12 +27,15 @@ module.exports = {
   getUserById: function(id)
   {
       const userFound = user.find(c => c.id === parseInt(id));
-      if(!userFound)
+      if(userFound)
       {
-          return false;
+        return userFound;
+
       }
       else
-        return userFound;
+        {
+            return false;
+        }
   },
   //add
   addUser: function(newUser)
@@ -45,15 +48,16 @@ module.exports = {
 deleteUser: function(id)
 {
     const userFound = user.find(c => c.id === parseInt(id));
-    if(!userFound)
-    {
-        return false;
-    }
-    else
+    if(userFound)
     {
       const i = user.indexOf(userFound);
       user.splice(i, 1);
       return user;
+
+    }
+    else
+    {
+      return false;
     }
 
 },
@@ -62,21 +66,23 @@ deleteUser: function(id)
 updateUser: function(id, existingUser)
 {
     const userFound = user.find(c => c.id === parseInt(id));
-    if(!userFound)
+    if(userFound)
     {
-        return false;
-    }
-    const i = user.indexOf(userFound);
+      const i = user.indexOf(userFound);
 
-        if(existingUser.name)
-        {
-            user[i].name = existingUser.name;
-        }
-        if(existingUser.email)
-        {
-            user[i].email = existingUser.email;
-        }
-        return userFound;
+      if(existingUser.name)
+      {
+          user[i].name = existingUser.name;
+      }
+      if(existingUser.email)
+      {
+          user[i].email = existingUser.email;
+      }
+      return userFound;
+
+    }
+    else
+    return false;
 }
 
 
