@@ -1,0 +1,41 @@
+.login-page {
+  margin: 90px auto;
+  max-width: 300px;
+  padding: 2.25%;
+  min-width: 200px;
+}
+
+.main
+{
+  background-image: url("../images4.jpg");
+  height: 100%;
+  /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:5%;
+
+}
+.heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+ }
+.form-field-full  {
+  width: 100%;
+
+}
+mat-form-field {
+  width: 100%;
+
+}
+div>a
+{
+ text-decoration: none;
+ color:#03a9f4;
+
+}
+.register
+{
+  margin-bottom: 15px;
+}

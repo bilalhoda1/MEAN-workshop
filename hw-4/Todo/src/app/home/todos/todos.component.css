@@ -1,0 +1,50 @@
+form
+{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+
+}
+
+mat-form-field
+{
+width:50%;
+
+}
+.submit-wrapper
+{
+  margin-left:3%;
+  margin-top:2%;
+
+}
+
+li{
+
+ list-style-type: none;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  font-size: 14px;
+
+}
+
+.list{
+
+   width: 60%;
+
+
+}
+.lbutton
+{
+
+  min-width:5%;
+
+}
+hr
+{
+  width: 110%;
+
+
+}
+
