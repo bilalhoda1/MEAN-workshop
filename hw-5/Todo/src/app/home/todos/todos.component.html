@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class='main'>
+<h3>Add Task</h3>
+<form>
+  <mat-form-field>
+    <input matInput type="text" placeholder="Enter text" [(ngModel)]="text" [ngModelOptions]="{standalone: true}" class="resize">
+  </mat-form-field>
+  <div class="submit-wrapper">
+      <button class="button" type='submit' mat-mini-fab color="primary" (click)="addNewTodo(text)" >Add</button>
+    </div>
+
+</form>
+<h3>Todo List</h3>
+
+  <li *ngFor="let todo of todoList">
+
+
+  <div class='list'>{{todo.name|titlecase}}<hr></div>  <div class='lbutton'><button mat-icon-button class="btn" (click)="openConfirmationDialog(todo)"><i class="fa fa-trash"></i></button>
+
+    <input type="checkbox" class="btn" [checked]="todo.completed" (change)="updateTodo($event,todo)">
+
+  </div>
+  </li>
+
+</div>

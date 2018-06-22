@@ -1,0 +1,119 @@
+/*top navigation bar*/
+
+/*outer div*/
+.topnav {
+    background-color:black;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    color:white;
+    z-index:1;
+  }
+  .fa-reorder{
+    margin-right:10px;
+  }
+  /*ul tag*/
+  .top{
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+  }
+  /*li tag containing Todo*/
+  .navbar {
+    float: left;
+  }
+  /*li tag having dropdown*/
+  .dropdown {
+    float:right;
+  }
+  li.dropdown {
+    padding-right:90px;
+
+  }
+  .nav, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 5px 12px 0px;
+
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color:#595a5b;
+  }
+
+  li.dropdown {
+    display: inline-block;
+  }
+  /*The content in the dropdown*/
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size:14px;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 14px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /*Side Bar*/
+  .sidenav {
+    height: 100%;
+    max-width: 140px;
+    position: fixed;
+    z-index: 1;
+    top: 43px;
+    background-color: rgb(34, 34, 34)  ;
+    overflow-x: hidden;
+    padding-top: 30px;
+  }
+
+  .sidenav a {
+    padding: 8px 10px 12px 18px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #818181;
+    display: block;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+    background-color:#49abfc;
+  }
+
+  .main {
+    margin-left: 120px; /* Same as the width of the sidenav */
+    font-size: 22px; /* Increased text to enable scrolling */
+    padding: 40px 10px;
+    word-wrap: break-word;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .sidenav i {
+    padding-right:10px;
+  }
+  .layout,.top {
+    margin:0 auto;
+    max-width:1800px;
+  }

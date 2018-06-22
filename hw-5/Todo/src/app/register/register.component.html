@@ -1,0 +1,49 @@
+<div class='main'>
+  <div class="login-page">
+    <mat-card *ngIf='!email'>
+      <form [formGroup]='rForm' (ngSubmit)='save(rForm)'>
+            <div class="heading">Register</div>
+              <div class="form-field-full">
+                <mat-form-field>
+                  <input  matInput name="firstName" formControlName='firstName' type="text" placeholder="First Name" required>
+                </mat-form-field>
+                <mat-error *ngIf="!rForm.controls['firstName'].valid && rForm.controls['firstName'].touched">First Name is required</mat-error>
+              </div>
+              <div class="form-field-full">
+
+                  <mat-form-field>
+                    <input  matInput name="lastName" formControlName='lastName' type="text" placeholder="Last Name" required>
+                  </mat-form-field>
+                  <mat-error *ngIf="!rForm.controls['lastName'].valid && rForm.controls['lastName'].touched">Last Name is required</mat-error>
+                </div>
+
+              <div class="form-field-full">
+
+                <mat-form-field>
+                  <input  matInput name="email" formControlName='email' type="email" placeholder="Email" required>
+                </mat-form-field>
+                <mat-error *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">Email is required</mat-error>
+              </div>
+
+
+              <div class="form-field-full">
+                <mat-form-field>
+                  <input type="password" name="password" formControlName='password' matInput placeholder="Password" required>
+                </mat-form-field>
+              </div>
+              <mat-error *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">Password is required</mat-error>
+              <div class="form-field-full">
+                  <mat-form-field>
+                    <input type="password" name="confrimPassword" formControlName='confirmPassword' matInput placeholder="Confirm Password" required>
+                  </mat-form-field>
+                </div>
+                <mat-error *ngIf="!rForm.controls['confirmPassword'].valid && rForm.controls['confirmPassword'].touched">Password is required</mat-error>
+              <div class="submit-wrapper">
+                <button type="submit" mat-raised-button color="primary">
+                  Submit
+                </button>
+              </div>
+        </form>
+      </mat-card>
+    </div>
+</div>

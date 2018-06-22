@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--top navigation bar -->
+<div class="topnav" color='primary'>
+  <ul class="top">
+      <li class="navbar"><i class="fa fa-reorder"></i><a class="nav">Todo App</a></li>
+      <li class="dropdown navbar">
+       <a href="javascript:void(0)" class="dropbtn">Settings</a>
+        <div class="dropdown-content">
+         <a class="nav">Change Password</a>
+         <a class="nav">Update Info</a>
+         <a href="" class="nav" (click)='logoutUser()'>Sign out</a>
+        </div>
+      </li>
+  </ul>
+</div>
+<!-- Sidebar -->
+<div class="layout">
+<div class="sidenav">
+  <a routerLink="./dashboard" routerLinkActive="active"><i class="fa fa-home"></i>Dashboard</a>
+  <a routerLink="./todos" routerLinkActive="active"><i class="fa fa-pencil"></i>New tasks</a>
+  <a routerLink="./users" routerLinkActive="active"><i class="fa fa-list-ul"></i>Our Team</a>
+  <!--a ><i class="fa fa-bell"></i>Notifications</a>
+  <a ><i class="fa fa-list"></i>All tasks</a>
+
+  <a><i class="fa fa-refresh"></i>Completed</a>
+  <a><i class="fa fa-star"></i>Starred tasks</a>
+  <a ><i class="fa fa-hourglass-start"></i>Today</a>
+  <a ><i class="fa fa-forward"></i>Future</a>
+  <a ><i class="fa fa-list-ol"></i>Priority list</a-->
+</div>
+<div class="main">
+<router-outlet></router-outlet>
+</div>
+</div>

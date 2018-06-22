@@ -1,0 +1,29 @@
+
+img
+{
+    border-radius: 50%;
+}
+.list
+{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.list-item
+{
+
+    margin:3%;
+    font-size:14px;
+    text-align: center;
+    transition: transform .2s;
+}
+
+h2
+{
+    text-align: center;
+}
+.list-item:hover
+{
+    transform: scale(1.2);
+}
